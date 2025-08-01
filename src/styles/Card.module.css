@@ -1,202 +1,180 @@
+:root {
+  --primary-color: #1da1f2;
+  --bg-color: #f7f9f9;
+  --card-color: #ffffff;
+  --text-color: #0f1419;
+  --subtext-color: #536471;
+  --accent-color: #5bc0f8;
+  --input-bg: rgba(0,129,201,0.18); /* Fondo azul más fuerte */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+  background: linear-gradient(180deg, #86E5FF 20%, #0081C9 80%);
+  padding: 80px 20px 40px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  font-family: 'Space Grotesk', sans-serif;
+}
 
 .twitCard {
-    width: 600px;
-    border: 1px solid #e8eff3;
-    padding: 20px;
-    display: flex;
-    gap: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-.twitCard picture img {
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    object-fit: cover;
-    border: 1px solid #e8eff3;
-}
-.userImage svg {
-    border-radius: 50%;
-}
-/* header card */
-.twitCard header {
-    display: flex;
-    justify-content: space-between;
-}
-.twitCard header div {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-.twitCard header h3, .twitCard header p {
-    margin: 0;
-    color: #536471;
-}
-.twitCard header h3 {
-    color: #0f1419;
+  background: var(--card-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  gap: 16px;
 }
 
-/* footer card */
-.twitCard footer {
-    display: flex;
+.userImage img,
+.userImage svg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  object-fit: cover;
 }
-.twitCard footer > div {
-    width: 24%;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #536471;
-    font-size: 14px;
+
+.content {
+  flex-grow: 1;
 }
 
 .content p {
-    margin-right: 25px;
-    text-align: left;
-}
-.content p span{
-    color: #1da1f2;
-}
-.content footer {
-    margin-top:  10px;
-}
-/* Form inputs */
-.formInputs {
-    margin-top: 30px;
-    position: relative;
-    padding-top: 47px;
-    display: flex;
-    justify-content: center;
-}
-.formInputs form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-}
-.formInputs form div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-    width: 100%;
+  margin-top: 8px;
+  line-height: 1.5;
+  color: var(--text-color);
 }
 
-.formInputs form span > button {
-    height: 100%;
-    border-radius: 10px;
-    font-size: 17px;
-    background-color: #fff;
-    width: 100%;
-    color: #1da1f2;
-    font-weight: 500;
-    border: 1px solid #5BC0F8;
-    cursor: pointer;
-    transition: .5s;
-}
-button.btnVerified {
-    background-color: #5BC0F8!important;
-    color: #fff!important;
-}
-.formInputs form span input {
-    width: 90%;
-    border: 0;
-    border-radius: 5px;
-    outline: none;
-}
-.formInputs form span input[type="text"],
-.formInputs form span input[type="number"],
-.formInputs form span input[type="datetime-local"] {
-    padding: 10px;
-}
-.formInputs form span label {
-    font-size: 17px;
-    margin-bottom: 6px;
-    display: inline-block;
-}
-.formInputs form span textarea {
-    width: 90%;
-    resize: none;
-    margin-top: 14px;
-    padding: 17px;
-    font-size: 17px;
-    font-family: 'Roboto', sans-serif;
-    border: 0;
-    outline: none;
-    border-radius: 5px;
-}
-.formInputs form span{
-    /* border: 1px solid gray; */
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #FFC93C;
-    flex-grow: 1;
-}
-.container {
-    max-width: 1000px;
-    margin-left: 15px;
-    margin-right: 15px;
+.content p span {
+  color: var(--primary-color);
 }
 
-/* hero styles */
-.hero {
-    /* background: #5BC0F8; */
-    background: linear-gradient(360deg, #86E5FF 20% , #0081C9 80%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px;
-    padding-bottom: 5px;
-    position: relative;
+.twitCard header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
 }
 
-.bgWave {
-    background: url(/public/mountains.svg);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-}
-.hero h1 {
-    margin: 0 0 76px;
-    font-size: 57px;
-    line-height: 50px;
-    color: #fff;
-    font-family: 'Space Grotesk', sans-serif;
+.twitCard header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-color);
 }
 
-.btnDownload {
-    background-color: #5BC0F8;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    padding: 20px 60px;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 500;
-    margin-top: 70px;
-    cursor: pointer;
-    transition: .5s background ;
+.twitCard header p {
+  margin: 0;
+  color: var(--subtext-color);
+  font-size: 14px;
 }
-.btnDownload:hover {
-    color: #5BC0F8;
-    background-color: #fff;
-    background-color: #fff;
 
+.twitCard footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.twitCard footer > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--subtext-color);
+  font-size: 14px;
 }
 
 .images {
-    width: 100%;
-    height: 281px;
-    border: 1px solid #c4cfd6;
-    border-radius: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  overflow: hidden;
+  max-height: 280px;
 }
-/* one images */
+
 .images img {
-    width: 100%;
-    height: 279px;
-    border-radius: 20px;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
+
+.formInputs {
+  padding: 40px 20px;
+  background: var(--bg-color);
+  box-shadow: 0 0 24px rgba(0, 129, 201, 0.3); /* Sombra azul fuerte */
+  border-radius: 16px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+form span,
+form div > span {
+  display: flex;
+  flex-direction: column;
+  background: var(--input-bg); /* Azul más fuerte */
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 16px rgba(0, 129, 201, 0.2); /* Sombra azul clara */
+}
+
+form label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btnDownload {
+  grid-column: span 2;
+ background: #0081C9 !important;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnDownload:hover {
+  background: #0d8ddb;
+}
+
+.btnVerified {
+  background: #0081C9 !important; /* Azul fuerte de arriba */
+  color: #fff !important;
+  border: none !important;
+}
+
+

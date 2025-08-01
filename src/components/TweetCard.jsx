@@ -19,7 +19,7 @@ import { toPng } from 'html-to-image'
 
 const TweetCard = () => {
     const currentDate = new Date().toISOString().slice(0, 16);
-    const paragraph = "This is a sample tweet. @mentions, #hashtags, https://links.com are all automatically converted."
+    const paragraph = "Este es un tweet de muestra. Las menciones @, los #hashtags y https://links.com se convierten automáticamente."
 
     const [avatar, setAvatar] = useState();
     const [name, setName] = useState("Carlos");
@@ -124,30 +124,30 @@ const TweetCard = () => {
                         <input type="file" onChange={uploadAvatar} accept=".png, .jpg, .svg"/>
                     </span>
                     <span>
-                        <label>Name:</label>
+                        <label>Nombre:</label>
                         <input type="text" onChange={e=>setName(e.target.value)} value={name}/>
                     </span>
                     <span>
-                        <label>Username:</label>
+                        <label>Usuario:</label>
                         <input type="text" onChange={e=>setUsername(e.target.value)} value={username}/>
                     </span>
                     <span>
-                        <label>Tweet date:</label>
+                        <label>Tweet fecha:</label>
                         <input type="datetime-local" onChange={handleDate} max={currentDate}/>
                     </span>
                     <span>
-                        <label>Tweet image:</label>
+                        <label>Tweet imagen:</label>
                         <input type="file" onChange={uploadImage} accept=".png, .jpg, .svg"/>
                     </span>
                     <span>
                         <button type='button'
                             onClick={()=>setVerified(current=>!current)}
                             className={verified ? styles.btnVerified : ""}
-                        >Verified
+                        >Verificado
                         </button>
                     </span>
                     <span>
-                        <label>Content: {`${size}/280`}</label>
+                        <label>Contenido: {`${size}/280`}</label>
                         <textarea cols="30" rows="5"
                             onChange={handleTextarea}
                             value={content}
@@ -156,7 +156,7 @@ const TweetCard = () => {
                     </span>
                     <div>
                         <span>
-                            <label>Comments:</label>
+                            <label>Comentarios:</label>
                             <input type="number" onChange={handleComments}/>
                         </span>
                         <span>
@@ -164,7 +164,7 @@ const TweetCard = () => {
                             <input type="number" onChange={handleLikes}/>
                         </span>
                         <span>
-                            <label>Likes:</label>
+                            <label>Gustos:</label>
                             <input type="number" onChange={handleRetweets}/>
                         </span>
                     </div>
@@ -172,7 +172,7 @@ const TweetCard = () => {
                         className={styles.btnDownload}
                         type="button"
                         onClick={downloadImage}
-                    >Download Tweet</button>
+                    >Descargar Tweet</button>
                 </form>
             </div>
             
